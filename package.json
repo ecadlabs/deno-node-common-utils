@@ -1,0 +1,48 @@
+{
+	"name": "@deno-node-common-utils",
+	"version": "0.1.0",
+	"main": "index.cjs",
+	"module": "index.js",
+	"source": "index.ts",
+	"type": "module",
+	"description": "A module of functions shared between both deno and node runtime",
+	"keywords": [
+		"taqueria",
+		"ecad",
+		"ecadlabs",
+		"tezos"
+	],
+	"scripts": {
+		"build": "npx tsc -noEmit -p ./tsconfig.json && npx tsup"
+	},
+	"author": "ECAD Labs",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ecadlabs/deno-node-common-utils.git",
+		"directory": "index"
+	},
+	"devDependencies": {
+		"typescript": "4.7.2"
+	},
+	"types": "./index.d.ts",
+	"tsup": {
+		"entry": [
+			"index.ts"
+		],
+		"sourcemap": true,
+		"target": "node16",
+		"outDir": "./",
+		"dts": true,
+		"clean": false,
+		"skipNodeModulesBundle": true,
+		"platform": "node",
+		"format": [
+			"esm"
+		]
+	},
+	"bugs": {
+		"url": "https://github.com/ecadlabs/taqueria/issues"
+	},
+	"homepage": "https://github.com/ecadlabs/taqueria#readme"
+}
